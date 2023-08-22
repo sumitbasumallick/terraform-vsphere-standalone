@@ -98,7 +98,7 @@ resource "vsphere_virtual_machine" "master" {
   }
 }
 resource "vsphere_virtual_machine" "segment" {
-  count            = "${var.count}"
+  count            = "${var.host_count}"
   name             = "${var.vm_name}-sdw${count.index + 1}"
   resource_pool_id = "${vsphere_resource_pool.main.id}"
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
