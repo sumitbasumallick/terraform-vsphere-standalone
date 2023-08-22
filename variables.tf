@@ -80,3 +80,11 @@ variable "vm_name" {
   description = "The name of the vSphere virtual machines and the hostname of the machine"
 }
 
+variable "count" {
+  description = "The instance count"
+}
+
+variable "resource_pool_name" {
+  description= "The name of a dedicated resource pool created by Terraform"
+  default = "terraform-vr"
+}
